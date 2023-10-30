@@ -1,49 +1,51 @@
 pipeline {
     agent any
     stages {
-        stage('Pipeline Stages'){
+        stage('Pipeline Stages') {
             steps {
                 sh "ls"
             }
         }
-        stage('second stage'){
+        stage('Second stage') {
             steps {
                 sh "pwd"
             }
         }
-        stage('Touch stage'){
+        stage('Touch stage') {
             steps {
-                sh "touch "example.txt""
+                sh 'touch example.txt'
             }
         }
-        stage('Echo stage'){
+        stage('Echo stage') {
             steps {
-                sh "echo "Oi Oi""
+                sh 'echo "Oi Oi"'
             }
         }
-        stage('Cat stage'){
+        stage('Cat stage') {
             steps {
-               sh "cat "example.txt""
+                sh 'cat example.txt'
             }
         }
-        stage('Make stage'){
+        stage('Make stage') {
             steps {
-               sh "mkdir "examplestore""
+                sh 'mkdir examplestore'
             }
         }
-        stage('Move Stage'){
+        stage('Move Stage') {
             steps {
-               sh "mv "example.txt examplestore/example.txt""
+                sh 'mv example.txt examplestore/example.txt'
             }
         }
-        stage('Change Stage'){
+        stage('Change Stage') {
             steps {
-               sh "cd "examplestore""
+                dir('examplestore') {
+                    sh 'pwd'
+                }
             }
         }
-        stage('Test'){
+        stage('Test') {
             steps {
-               sh "cat "example.txt""
+                sh 'cat examplestore/example.txt'
             }
         }
     }
