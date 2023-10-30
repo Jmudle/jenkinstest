@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Echo stage') {
             steps {
-                sh 'echo "Oi Oi"'
+                sh 'echo "Oi Oi" > "example.txt"'
             }
         }
         stage('Cat stage') {
