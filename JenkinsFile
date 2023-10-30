@@ -13,37 +13,37 @@ pipeline {
         }
         stage('Touch stage'){
             steps {
-                touch "example.txt"
+                sh "touch "example.txt""
             }
         }
         stage('Echo stage'){
             steps {
-                echo "Oi Oi"
+                sh "echo "Oi Oi""
             }
         }
         stage('Cat stage'){
             steps {
-                cat "example.txt"
+               sh "cat "example.txt""
             }
         }
         stage('Make stage'){
             steps {
-                mkdir "examplestore"
+               sh "mkdir "examplestore""
             }
         }
         stage('Move Stage'){
             steps {
-                mv "example.txt examplestore/example.txt"
+               sh "mv "example.txt examplestore/example.txt""
             }
         }
         stage('Change Stage'){
             steps {
-                cd "examplestore"
+               sh "cd "examplestore""
             }
         }
         stage('Test'){
             steps {
-                cat "example.txt"
+               sh "cat "example.txt""
             }
         }
     }
