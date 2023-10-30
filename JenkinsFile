@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Move Stage'){
             steps {
-                mv "example.txt" "examplestore/example.txt"
+                mv "example.txt examplestore/example.txt"
             }
         }
         stage('Change Stage'){
