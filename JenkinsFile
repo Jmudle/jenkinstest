@@ -26,11 +26,6 @@ pipeline {
                 sh 'cat example.txt'
             }
         }
-        stage('Make stage') {
-            steps {
-                sh 'mkdir examplestore'
-            }
-        }
         stage('Move Stage') {
             steps {
                 sh 'mv example.txt examplestore/example.txt'
